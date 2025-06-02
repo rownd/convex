@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.28.0",
+    "@release-it/conventional-changelog": "^10.0.1",
     "@rownd/react": "^2.7.4",
     "@types/node": "^20.0.0",
     "@types/react": "^19.1.2",
@@ -38,5 +39,22 @@
     "typescript-eslint": "^8.33.0",
     "vite-plugin-dts": "^4.5.4",
     "vitest": "^3.1.2"
+  },
+  "release-it": {
+    "git": {
+      "commitMessage": "chore: release ${version}",
+      "tagName": "v${version}"
+    },
+    "npm": {
+      "publish": true
+    },
+    "github": {
+      "release": true
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular"
+      }
+    }
   }
 }
